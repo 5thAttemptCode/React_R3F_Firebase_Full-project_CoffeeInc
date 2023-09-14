@@ -1,16 +1,17 @@
 import React from 'react'
 import Shop from './Shop'
-import Header from '../components/Header'
 import Experience from '../components/Experience'
+import Landing from '../components/Landing'
+
 
 
 export default function Home() {
+
+
   return (
     <div className='section home'>
-      <Header />
-      <Header />
-      <Header />
       <Experience />
+      <Landing />
       <Shop />
     </div>
   )
