@@ -1,7 +1,54 @@
+@import url('https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro');
+
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body{
+  background: #141414;
+  color: #f5f5f5;
+  overflow-x: hidden;
+}
+
+a{
+  color: black;
+  text-decoration: none;
+}
+
+nav{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 3vw;
+  z-index: 20;
+  background: linear-gradient(#141414, rgb(20, 20, 20, 0.3), transparent);
+}
+
+.logo{
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-btn{
+  color: whitesmoke;
+  font-size: 30px;
+}
+
+.logo > span{
+  letter-spacing: 2px;
+}
+
+.home{
+  margin-top: 10vh;
 }
 
 .canvas{
@@ -13,7 +60,65 @@
 }
 
 .h1{
-  width: 100%;
-  height: 30vh;
   z-index: 10;
+  font-weight: 400;
+  font-size: 180px;
+  line-height: 90%;
+}
+
+.landing{
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 3vw;
+}
+
+.menu-btn{
+  height: 30px;
+  aspect-ratio: 2 / 1;
+  cursor: pointer;
+}
+
+.menu-btn > div:nth-child(1){
+  width: 100%;
+  height: 50%;
+  border-bottom: 3px solid white;
+}
+
+.menu-btn > div:nth-child(2){
+  width: 60%;
+  height: 50%;
+  border-bottom: 3px solid white;
+}
+
+.menu{
+  position: fixed;
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;;
+  justify-content: center;
+  align-items: flex-start;
+  background: rgb(164, 193, 164);
+  z-index: 12;
+}
+
+.product{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-inline: 3vw;
+}
+
+.product-btn{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 35px;
+  background: whitesmoke;
+  color: #141414;
+  padding: 15px;
 }
