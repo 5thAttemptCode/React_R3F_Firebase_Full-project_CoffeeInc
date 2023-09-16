@@ -1,5 +1,7 @@
 import React from 'react'
 import ProductBtn from './ProductBtn'
+import "./css/product.css"
+
 
 export default function Product({coffee}) {
   return (

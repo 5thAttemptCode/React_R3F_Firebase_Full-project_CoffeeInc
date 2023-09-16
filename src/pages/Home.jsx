@@ -6,10 +6,8 @@ import Landing from '../components/Landing'
 
 
 export default function Home() {
-
-
   return (
-    <div className='section home'>
+    <div className='home'>
       <Experience />
       <Landing />
       <Shop />

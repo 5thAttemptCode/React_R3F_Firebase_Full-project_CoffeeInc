@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { db } from "../firebase.config"
 import { collection , getDocs, query} from "firebase/firestore"
 import Product from '../components/Product'
+import PageHeading from '../components/PageHeading'
+
 
 export default function Shop() {
 
@@ -28,6 +30,7 @@ export default function Shop() {
 
   return (
     <div className='section shop'>
+      <PageHeading text="All of our products" />
       <Product coffee={coffee} />
     </div>
   )

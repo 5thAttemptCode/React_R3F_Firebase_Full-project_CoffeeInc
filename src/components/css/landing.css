@@ -1,0 +1,11 @@
+.landing{
+  height: 90vh;
+  margin-top: 10vh;
+  padding-inline: 3vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+  
+  

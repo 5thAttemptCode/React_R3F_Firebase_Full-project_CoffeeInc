@@ -1,5 +1,7 @@
 import React from 'react'
 import { Canvas } from "@react-three/fiber"
+import "./css/experience.css"
+
 
 export default function Experience() {
   return (
