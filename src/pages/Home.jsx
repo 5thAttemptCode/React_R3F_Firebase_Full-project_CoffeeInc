@@ -1,7 +1,7 @@
 import React from 'react'
 import Shop from './Shop'
-import Experience from '../components/Experience'
-import Landing from '../components/Landing'
+import Experience from '../components/experience/Experience'
+import Landing from '../components/landing/Landing'
 
 
 

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { db } from "../firebase.config"
 import { collection , getDocs, query} from "firebase/firestore"
-import Product from '../components/Product'
-import PageHeading from '../components/PageHeading'
+import Product from '../components/products/Product'
+import PageHeading from '../components/pageHeading/PageHeading'
 
 
 export default function Shop() {
