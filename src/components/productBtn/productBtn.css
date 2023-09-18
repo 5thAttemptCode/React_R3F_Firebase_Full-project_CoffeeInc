@@ -11,7 +11,7 @@
   position: relative;
   display: inline-block;
   color: var(--black);
-  font-size: 35px;
+  font-size: clamp(1.75rem, 1.2031rem + 1.75vw, 2.1875rem);
   font-weight: 500;
 }
 
@@ -41,7 +41,6 @@
   pointer-events: none;
   opacity: 0;
   transition: all 0.2s;
-  filter: grayscale(50%);
 }
 
 .product-btn:hover > img{

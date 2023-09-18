@@ -1,0 +1,31 @@
+.buy-now{
+    background: var(--white);
+    color: var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    padding-block: 10px;
+    cursor: pointer;
+}
+
+.buy-now > div{
+    position: relative;
+    overflow: hidden;
+}
+
+.buy-now > div > div{
+    transition: all 0.3s;
+}
+
+.buy-now > div > div::after{
+    content: '+ Add to Cart';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transform: translateX(0%);
+}
+
+.buy-now:hover > div > div{
+    transform: translateX(-100%);
+}

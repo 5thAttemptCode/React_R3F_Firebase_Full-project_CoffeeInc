@@ -1,0 +1,34 @@
+.product-details{
+    height: 100vh;
+    width: 100%;
+    background: var(--contrast);
+    display: flex;
+    padding: 10vh;
+}
+
+.container{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image > img{
+    width: auto;
+}
+
+.details > div{
+    display: grid;
+    gap: 10px;
+    padding-inline: 10vh;
+}
+
+.details > div > p{
+    font-size: 30px;
+}
+
+.name{
+    font-weight: 600;
+    color: var(--black);
+}
