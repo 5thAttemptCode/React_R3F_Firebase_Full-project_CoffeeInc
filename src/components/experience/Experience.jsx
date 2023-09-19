@@ -11,9 +11,18 @@ export default function Experience() {
     <div className='canvas'>
       <Canvas camera={{ position: [0, 5, 0], fov: 55 }}>
 
-        <Coffee rotation-y={1.2} />
-        <directionalLight intensity={2} position={[ 0, 4, 0]} />
-        <SpotLight color="whitesmoke" position={[3, 3, -2]} castShadow  penumbra={1} distance={6} angle={0.35} attenuation={5} anglePower={10} intensity={4} />
+        <Coffee castShadow receiveShadow rotation-y={1.2} />
+        <directionalLight intensity={3.5} position={[ 0, 4, 0]} />
+        <SpotLight 
+          color="whitesmoke" 
+          position={[3, 3, -2]} 
+          castShadow  penumbra={1} 
+          distance={6} 
+          angle={0.35} 
+          attenuation={5} 
+          anglePower={10} 
+          intensity={4} 
+        />
         
         <mesh position={[0, 0, 2]} receiveShadow>
           <planeGeometry args={[50, 50]} />

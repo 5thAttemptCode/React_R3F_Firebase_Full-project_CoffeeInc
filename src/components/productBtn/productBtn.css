@@ -46,3 +46,13 @@
 .product-btn:hover > img{
   opacity: 1;
 }
+
+@media (max-width: 930px){
+  .product-btn > img{
+    display: none;
+  }
+
+  .product-btn > p::after{
+    display: none;
+  }
+}
