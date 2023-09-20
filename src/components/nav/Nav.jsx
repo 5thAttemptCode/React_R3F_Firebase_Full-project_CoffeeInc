@@ -21,7 +21,7 @@ export default function Nav() {
             <Link to="/cart">
               <ShoppingCartSimple size={25} />
             </Link>
-            <Link to="/login">
+            <Link to="/account">
               <UserCircle size={25} />
             </Link>
             <div className="menu-btn" onClick={() => setShow(!show)}>

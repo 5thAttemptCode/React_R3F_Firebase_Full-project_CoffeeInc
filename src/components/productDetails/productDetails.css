@@ -8,12 +8,12 @@
 }
 
 .container{
-    height: 80vh;
+    height: 70vh;
     width: 50%;
-    margin-top: 10vh;
+    margin-top: 20vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start
 }
 
 .image > img{
@@ -24,7 +24,7 @@
     display: grid;
     gap: 10px;
     padding-inline-start: clamp(0rem, -3.9063rem + 12.5vw, 3.125rem);
-    padding-inline-end: clamp(0rem, -3.9063rem + 12.5vw, 6.250rem);
+    padding-inline-end: clamp(0rem, -25.625rem + 50vw, 12.5rem);
 }
 
 .details > div > p{
@@ -37,6 +37,7 @@
     font-size: clamp(1.375rem, 0.4375rem + 3vw, 2.125rem);
 }
 
+
 @media (max-width: 830px){
     .product-details{
         height: auto;
@@ -45,10 +46,11 @@
 
     .container{
         width: 100%;
-        padding-inline: 5px;
+        padding-inline: 10px;
     }
 
     .details{
+        margin-top: 10vh;
         height: auto;
     }
 

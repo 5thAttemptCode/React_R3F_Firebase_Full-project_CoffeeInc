@@ -1,0 +1,13 @@
+.login-bar{
+    position: fixed;
+    top: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 3vw;
+}
+
+.login-bar > p{
+    font-size: clamp(0.875rem, 0.5625rem + 1vw, 1.125rem);
+    opacity: 0.5;
+}
