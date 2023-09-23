@@ -4,11 +4,12 @@ import "./menu.css"
 
 
 export default function Menu() {
-  return (
+
+  return(
     <ul className='menu'>
-        <Link to={"/shop"}>SHOP</Link>
-        <Link to={"/about"}>ABOUT</Link>
-        <Link to={"/contact"}>CONTACT</Link>
+        <Link className='linkColor' to={"/about"}>ABOUT</Link>
+        <Link className='linkColor' to={"/contact"}>CONTACT</Link>
+        <Link className='linkColor' to={"/"}>SHOP</Link>
     </ul>
   )
 }
