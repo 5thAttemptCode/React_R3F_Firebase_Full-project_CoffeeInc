@@ -4,15 +4,19 @@ import { Link } from 'react-router-dom'
 import ProductDetails from '../productDetails/ProductDetails'
 
 
+export default function ProductBtn({data}) {
 
-export default function ProductBtn({ cafe }) {
+  // const { id, name, image } = props.data
   return (
-    // <div className='product-btn'>
-      
-    // </div>
-    <Link className='product-btn' to={`/${cafe.id}`} state={{ cafe }} element={<ProductDetails />} >
-      <p>{cafe.name}</p>
-      <img src={cafe.image} alt="" />
+    <Link 
+      className='product-btn' 
+      to={`/${data.id}`}
+      state={{data}}
+      element={<ProductDetails />}
+    >
+      <p>{data.name}</p>
+      <img src={data.image} alt="" />
     </Link>
   )
 }
+
