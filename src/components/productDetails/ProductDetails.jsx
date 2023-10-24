@@ -1,30 +1,33 @@
-import React from 'react'
-import { useLocation } from 'react-router-dom'
+import React, { useContext } from 'react'
 import "./productDetails.css"
-import BuyNow from '../buyNow/BuyNow'
+import { useLocation } from 'react-router-dom';
+import { ShopContext } from '../../context/ShopContext';
 
 
+ export default function ProductDetails() {
 
-export default function ProductDetails() {
+  //Get the data for each product
+  const location = useLocation()
+  const data = location.state.data
+  const { id, name, details, price, image } = data
 
-    const location = useLocation()
-    const cafe = location.state.cafe
+  //context
+  const { addToCart, cartItems } = useContext(ShopContext)
+  const cartItemCount = cartItems[id];
 
   return (
-    <div className='product-details'>
+    <div className="product-details">
       <div className="container image">
-        <img src={cafe.image} alt="" />
+        <img src={image} alt="" />
       </div>
-      <div className="container details">
-        <div>
-            <p className='name'>{cafe.name}</p>
-            <p>{cafe.details}</p>
-            <hr />
-            <p>${cafe.price}</p>
-            <br />
-            <BuyNow />
-        </div>
+      <div className="product-info">
+        <h2>{name}</h2>
+        <p>{price}</p>
+        <p>{details}</p>
       </div>
+      <button onClick={() => addToCart(id)}>
+        Add To Cart {cartItemCount > 0 && <> ({cartItemCount})</>}
+      </button>
     </div>
-  )
+  );
 }
