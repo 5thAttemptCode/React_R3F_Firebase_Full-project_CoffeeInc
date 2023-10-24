@@ -1,13 +1,21 @@
 import React from 'react'
-import ProductBtn from '../productbtn/ProductBtn'
+import ProductBtn from '../productBtn/ProductBtn'
 import "./product.css"
+import useCoffeeShop from '../../useCoffee'
 
 
-export default function Product({coffee}) {
+export default function Product() {
+  
+const coffee = useCoffeeShop()
+
   return (
     <div className='product'>
-      {coffee && coffee.map((cafe) =>
-        <ProductBtn key={cafe.id} cafe={cafe} />)}
+      {coffee.map((cafe) =>
+        <ProductBtn 
+          key={cafe.id} 
+          data={cafe} 
+        />
+      )}
     </div>
   )
 }
