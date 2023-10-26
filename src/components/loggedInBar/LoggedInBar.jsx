@@ -1,6 +1,6 @@
 import React from 'react'
 import "./loggedInBar.css"
-import { UserAuth } from '../../context/Context'
+import { UserAuth } from '../../context/AuthContext'
 
 export default function LoggedInBar() {
     const { user } = UserAuth()

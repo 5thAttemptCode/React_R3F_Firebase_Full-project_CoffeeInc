@@ -1,85 +1,74 @@
 import { createContext, useEffect, useState } from "react";
-import { db } from "../firebase.config";
-import { collection, query } from "firebase/firestore";
+import useCoffeeShop from "../useCoffee";
+
 
 export const ShopContext = createContext(null);
 
-const coffeeRef = () => {
-    
-  const [ coffee, setCoffee ] = useState()
+export const ShopContextProvider = (props) => {
+  const [ cartItems, setCartItems ] = useState({})
+  const { coffee, isLoading } = useCoffeeShop()
 
   useEffect(() => {
-    const coffeeRef = collection(db, "coffee")
-    const q = query(coffeeRef)
-    getDocs(q)
-      .then((querySnapshot) => {
-        let coffee = []
-        querySnapshot.docs.forEach((doc) => {
-          coffee.push({ ...doc.data(), id: doc.id})
-        })
-        setCoffee(coffee)
+    if (!isLoading) { //Add check for isLoading
+      let defaultCart = {}
+      coffee.forEach((item) => {
+          defaultCart[item.id] = 0
       })
-      .catch(err => {
-      })
-     
-  }, [])
-}
+      setCartItems(defaultCart)
+    }
+  }, [coffee, isLoading])
 
-
-const getDefaultCart = () => {
-
-  let cart = {};
-  for (let i = 1; i < coffeeRef.length + 1; i++) {
-    cart[i] = 0;
-  }
-  return cart;
-};
-
-export const ShopContextProvider = (props) => {
-
-  const [cartItems, setCartItems] = useState(getDefaultCart());
-
+  //___________________________________________
   const getTotalCartAmount = () => {
-    let totalAmount = 0;
+    let totalAmount = 0
     for (const item in cartItems) {
       if (cartItems[item] > 0) {
-        let itemInfo = coffeeRef.find((cafe) => cafe.id === Number(item));
-        totalAmount += cartItems[item] * itemInfo.price;
+        let itemInfo = coffee.find((cafe) => String(cafe.id) === String(item))
+        if (itemInfo) {
+          totalAmount += cartItems[item] * itemInfo.price
+        } else {
+          console.warn(`No item found with id ${item}`)
+        }
       }
     }
     return totalAmount;
   };
 
+  //___________________________________________
   const addToCart = (itemId) => {
-    setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
-    console.log("HELLO");
+    setCartItems((prev) => ({ ...prev, [itemId]: (prev[itemId] || 0) + 1 }))
   };
-  
 
+  //___________________________________________
   const removeFromCart = (itemId) => {
-    setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
+    setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }))
   };
 
+  //___________________________________________
   const updateCartItemCount = (newAmount, itemId) => {
-    setCartItems((prev) => ({ ...prev, [itemId]: newAmount }));
+    setCartItems((prev) => ({ ...prev, [itemId]: newAmount }))
   };
 
+  //___________________________________________
   const checkout = () => {
-    setCartItems(getDefaultCart());
+    setCartItems(getDefaultCart())
   };
 
+  //___________________________________________
   const contextValue = {
     cartItems,
     addToCart,
-    updateCartItemCount,
     removeFromCart,
+    updateCartItemCount,
     getTotalCartAmount,
     checkout,
   };
+
+  // console.log(cartItems);
 
   return (
     <ShopContext.Provider value={contextValue}>
       {props.children}
     </ShopContext.Provider>
-  );
+  )
 };

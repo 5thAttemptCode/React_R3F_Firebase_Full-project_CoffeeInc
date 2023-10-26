@@ -6,7 +6,10 @@ import useCoffeeShop from '../../useCoffee'
 
 export default function Product() {
   
-const coffee = useCoffeeShop()
+const {coffee, isLoading} = useCoffeeShop()
+if (isLoading) {
+  return <div>Loading...</div>
+} 
 
   return (
     <div className='product'>

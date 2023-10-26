@@ -1,9 +1,10 @@
 import "./buyNow.css"
 import { ShopContext } from "../../context/ShopContext";
 import { useContext } from "react";
+import useCoffeeShop from "../../useCoffee";
 
 
-export default function BuyNow({cafe}) {
+export default function BuyNow({ cafe }) {
 
   const { addToCart, cartItems } = useContext(ShopContext);
   const cartItemCount = cartItems[cafe.id];
@@ -18,5 +19,3 @@ export default function BuyNow({cafe}) {
     </div>
   )
 }
-
-// onClick={console.log(cafe.id)}

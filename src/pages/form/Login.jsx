@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import "./form.css"
 import { Link, useNavigate } from 'react-router-dom'
 import SignUp from './SignUp'
-import { UserAuth } from '../../context/Context'
+import { UserAuth } from '../../context/AuthContext'
 
 
 export default function Login() {

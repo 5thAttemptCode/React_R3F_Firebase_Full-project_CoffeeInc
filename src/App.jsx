@@ -8,30 +8,33 @@ import ProductDetails from './components/productDetails/ProductDetails'
 import Login from './pages/form/Login'
 import Cart from './pages/cart/Cart'
 import SignUp from './pages/form/SignUp'
-import { AuthContextProvider } from './context/Context'
+import { AuthContextProvider } from './context/AuthContext'
 import Account from './pages/account/Account'
 import ProtectedRoute from './components/ProtectedRoute'
 import LoggedInBar from './components/loggedInBar/LoggedInBar'
+import { ShopContextProvider } from './context/ShopContext'
 
 
 export default function App() {
   return (
-    <AuthContextProvider>
-    <BrowserRouter>
-      <Nav />
-      <LoggedInBar />
-        <Routes>
-          <Route index element={<Home />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path="/:cafeId" element={<ProductDetails />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/cart" element={<ProtectedRoute><Cart /></ProtectedRoute>} />
-          <Route path="/account" element={<ProtectedRoute><Account /></ProtectedRoute>} />
-        </Routes>
-    </BrowserRouter>
-    </AuthContextProvider>
+    <ShopContextProvider>
+      <AuthContextProvider>
+        <BrowserRouter>
+          <Nav />
+          <LoggedInBar />
+            <Routes>
+              <Route index element={<Home />} />
+              <Route path='/about' element={<About />} />
+              <Route path='/contact' element={<Contact />} />
+              <Route path="/:id" element={<ProductDetails />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<SignUp />} />
+              <Route path="/cart" element={<ProtectedRoute><Cart /></ProtectedRoute>} />
+              <Route path="/account" element={<ProtectedRoute><Account /></ProtectedRoute>} />
+            </Routes>
+        </BrowserRouter>
+      </AuthContextProvider>
+    </ShopContextProvider>
   )
 }
 

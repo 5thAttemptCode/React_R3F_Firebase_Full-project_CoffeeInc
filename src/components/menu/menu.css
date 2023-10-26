@@ -20,7 +20,6 @@
   justify-content: flex-end;
   align-items: flex-end;
   padding: 0.5rem;
-  transition: all 0.2s;
 }
 
 .menu:has(a:hover) a:not(:hover){

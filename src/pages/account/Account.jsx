@@ -1,5 +1,5 @@
 import React from 'react'
-import { UserAuth } from '../../context/Context'
+import { UserAuth } from '../../context/AuthContext'
 import { useNavigate } from 'react-router-dom'
 import "./account.css"
 
