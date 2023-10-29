@@ -1,6 +1,7 @@
 import React from 'react'
-import Product from '../components/products/Product'
-import PageHeading from '../components/pageHeading/PageHeading'
+
+import PageHeading from '../components/pageHeading/index'
+import Product from '../components/products/index'
 
 
 export default function Shop() {

@@ -1,8 +1,10 @@
 import React from 'react'
-import PageHeading from '../components/pageHeading/PageHeading'
+
+import PageHeading from '../components/pageHeading/index'
 
 
 export default function About() {
+
   return (
     <div className='section section-margin about'>
       <PageHeading text="Our mission" />

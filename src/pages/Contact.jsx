@@ -1,8 +1,10 @@
 import React from 'react'
-import PageHeading from '../components/pageHeading/PageHeading'
+
+import PageHeading from '../components/pageHeading/index'
 
 
 export default function Contact() {
+
   return (
     <div className='section section-margin contact'>
       <PageHeading text="Let's get in touch" />

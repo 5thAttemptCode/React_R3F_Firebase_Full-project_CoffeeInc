@@ -1,9 +1,99 @@
 .cart{
-    height: 100vh;
-    width: 100%;
+    margin: 0 auto;
+    width: 60%;
+    padding-top: 15vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
+}
+
+.cart > h1{
+    margin: 0 auto
+}
+
+.cart > div{
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.cart > div .in-cart{
+    width: 60%;
+}
+
+.cart > div .sticky{
+    position: relative;
+    width: 40%;
+}
+
+.cart > div .sticky > div{
+    position: sticky;
+    top: 20px;
+}
+
+.total{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background: white;
+    color: black;
+}
+
+/*______________________________________*/
+.item-in-cart{
+    display: flex;
+    gap: 50px;
+    width: 100%;
+    height: 220px;
+    padding: 20px;
+    background: white;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.item-in-cart > img{
+    height: 100%;
+    width: auto;
+}
+
+.item-in-cart > div h1,
+.item-in-cart > div h3{
+    font-weight: 500;
+}
+
+.item-in-cart > div h1{
+    font-size: clamp(1.375rem, 0.5938rem + 2.5vw, 2rem);
+}
+
+.input{
+    width: 25%;
+    padding-block: 5px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 1200px){
+    .cart{
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px){
+    .cart{
+        width: 95%;
+    }
+}
+
+@media (max-width: 680px){
+    .cart > div{
+        flex-direction: column;
+    }
+
+    .cart > div .sticky, 
+    .cart > div .in-cart{
+        width: 100%;
+    }
+
+    .item-in-cart > div{
+        padding-right: 1rem;
+    }
 }

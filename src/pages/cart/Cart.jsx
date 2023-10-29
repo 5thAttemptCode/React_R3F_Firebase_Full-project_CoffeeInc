@@ -1,17 +1,19 @@
 import React, { useContext } from 'react'
-import "./cart.css"
-import useCoffeeShop from '../../useCoffee'
-import { ShopContext } from '../../context/ShopContext'
-import ItemInCart from './ItemInCart'
+import './cart.css'
+
 import { useNavigate } from 'react-router-dom'
+
+import ItemInCart from './ItemInCart'
+import useCoffeeShop from '../../utils/useCoffee'
+import { ShopContext } from '../../context/ShopContext'
+import PayPalButton from '../../utils/paypal'
 
 
 export default function Cart() {
   
-  //Continue Shopping
   const navigate = useNavigate()
 
-
+  //context
   const { coffee, isLoading } = useCoffeeShop()
   const { cartItems, getTotalCartAmount } = useContext(ShopContext)
   const totalAmount = getTotalCartAmount().toFixed(2) //two digist after period
@@ -23,22 +25,39 @@ export default function Cart() {
   return (
     <div className='cart'>
       <h1>YOUR CART</h1>
+      <br />
+
       <div>
-        {coffee.map((cafe) => {
-          if (cartItems[cafe.id] !== 0) {
-            return <ItemInCart key={cafe.id} data={cafe} />
-          }
-        })}
+        <div className='in-cart'>
+          {coffee.map((cafe) => {
+            if (cartItems[cafe.id] !== 0) {
+              return <ItemInCart key={cafe.id} data={cafe} />
+            }
+          })}
+        </div>
+
+        <div className='sticky'>
+          <div>
+            {totalAmount > 0 ? (
+              <div className='total'>
+                <hr />
+                <br />
+                <h3>Total: &nbsp; &nbsp; ${totalAmount}</h3>
+                <hr />
+                <hr />
+                <br />
+                <br />
+                <div className="paypal" >
+                  <PayPalButton totalAmount={totalAmount}/>
+                </div>
+              </div>
+              ) : (
+                null
+            )}
+          </div>
+        </div>
       </div>
-      {totalAmount > 0 ? (
-      <div>
-          <p>TOTAL ${totalAmount}</p>
-          <button onClick={() => navigate("/")}>Continue Shopping</button>
-          <button>BUY NOW</button>
-      </div>
-      ) : (
-        <h2>Your cart needs coffee!</h2>
-      )}
+
     </div>
   )
 }

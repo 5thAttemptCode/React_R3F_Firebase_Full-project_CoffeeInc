@@ -8,36 +8,69 @@ nav{
     align-items: center;
     padding-inline: 3vw;
     z-index: 20;
-    background: linear-gradient(#141414, rgb(20, 20, 20, 0.3), transparent);
 }
 
-.logo-btn{
+nav > .logo .logo-btn{
     color: var(--white);
     font-size: clamp(1.5625rem, 1.1719rem + 1.25vw, 1.875rem);
 }
 
-.logo > div{
+nav > .logo > div{
     letter-spacing: 2px;
 }
 
-.items{
+nav > .items{
+    position: relative;
     display: flex;
+    align-items: center;
     gap: 30px;
     height: 100%;
+}
+
+nav > .items .cart-amount{
+    position: absolute;
+    top: -30%;
+    left: 40%;
+    height: 1rem;
+    width: 1rem;
+    padding: 11px;
+    border-radius: 50%;
+    background: #900000;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-.menu-btn{
+nav > .items .user{
+    position: relative;
+}
+
+nav > .items .user .login-check{
+    position: absolute;
+    top: -30%;
+    right: -30%;
+    border-radius: 50%;
+    background: green;
+}
+
+nav > .items > .menu-btn{
     height: 50%;
     aspect-ratio: 1.5 / 1;
     cursor: pointer;
 }
 
-.menu-btn > div{
+nav > .items > .menu-btn > div{
     height: 35%;
     border-bottom: 3px solid var(--white);
 }
 
-.menu-btn > div:nth-child(2){
+nav > .items > .menu-btn > div:nth-child(2){
     width: 60%;
+}
+
+@media (max-width: 768px){
+    nav > .items > .menu-btn{
+        aspect-ratio: 1.1 / 1;
+        height: 40%
+    }
 }

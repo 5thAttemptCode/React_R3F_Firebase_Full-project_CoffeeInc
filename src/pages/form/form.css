@@ -6,48 +6,53 @@
     align-items: center;
 }
 
-.form-container{
-    padding-block: 30px;
-    padding-inline: clamp(0.625rem, -0.1563rem + 2.5vw, 1.25rem);
-}
-
-.login{
+.form-wrapper > .login{
     background: var(--contrast);
 }
 
-.signup{
+.form-wrapper > .login .demo{
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.form-wrapper > .signup{
     background: var(--white);
     color: var(--black);
 }
 
-.form-container > h2{
+.form-wrapper > .form-container{
+    padding-block: 30px;
+    padding-inline: clamp(0.625rem, -0.1563rem + 2.5vw, 1.25rem);
+}
+
+.form-wrapper > .form-container > h2{
     font-size: 25px;
     font-weight: 300;
     margin-bottom: 30px;
 }
 
-.form-container > form{
+.form-wrapper > .form-container > form{
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.form-container > form > div{
+.form-wrapper > .form-container > form > div{
     display: flex;
     flex-direction: column;
     gap: 2px;
 }
 
-.form-container > form > div > label{
+.form-wrapper > .form-container > form > div > label{
     opacity: 0.7;
 }
 
-.form-container > form  > div > input{
+.form-wrapper > .form-container > form  > div > input{
     font-size: 18px;
     padding: 7px 10px;
 }
 
-.form-container > form > button{
+.form-wrapper > .form-container > form > button{
     width: 100%;
     font-size: 18px;
     padding: 7px 10px;
@@ -59,18 +64,18 @@
     cursor: pointer;
 }
 
-.form-container > p{
+.form-wrapper > .form-container > p{
     font-weight: 500;
     display: flex;
     margin-top: 30px;
 }
 
-.form-container > p > .underline{
+.form-wrapper > .form-container > p > .underline{
     text-decoration: underline;
     text-transform: uppercase;
 }
 
-.signup > p > .underline{
+.form-wrapper > .signup > p > .underline{
     color: var(--black);
 }
 

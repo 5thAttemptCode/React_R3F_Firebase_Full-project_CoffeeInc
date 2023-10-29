@@ -1,8 +1,8 @@
-import { createContext, useEffect, useState } from "react";
-import useCoffeeShop from "../useCoffee";
+import { createContext, useEffect, useState } from "react"
+import useCoffeeShop from '../utils/useCoffee'
 
 
-export const ShopContext = createContext(null);
+export const ShopContext = createContext(null)
 
 export const ShopContextProvider = (props) => {
   const [ cartItems, setCartItems ] = useState({})
@@ -12,7 +12,7 @@ export const ShopContextProvider = (props) => {
     if (!isLoading) { //Add check for isLoading
       let defaultCart = {}
       coffee.forEach((item) => {
-          defaultCart[item.id] = 0
+        defaultCart[item.id] = 0
       })
       setCartItems(defaultCart)
     }
@@ -27,32 +27,32 @@ export const ShopContextProvider = (props) => {
         if (itemInfo) {
           totalAmount += cartItems[item] * itemInfo.price
         } else {
-          console.warn(`No item found with id ${item}`)
+          console.warn(`No coffee with the id ${item} is brewing...`)
         }
       }
     }
-    return totalAmount;
-  };
+    return totalAmount
+  }
 
   //___________________________________________
   const addToCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: (prev[itemId] || 0) + 1 }))
-  };
+  }
 
   //___________________________________________
   const removeFromCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }))
-  };
+  }
 
   //___________________________________________
   const updateCartItemCount = (newAmount, itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: newAmount }))
-  };
+  }
 
   //___________________________________________
   const checkout = () => {
     setCartItems(getDefaultCart())
-  };
+  }
 
   //___________________________________________
   const contextValue = {
@@ -62,13 +62,11 @@ export const ShopContextProvider = (props) => {
     updateCartItemCount,
     getTotalCartAmount,
     checkout,
-  };
-
-  // console.log(cartItems);
+  }
 
   return (
     <ShopContext.Provider value={contextValue}>
       {props.children}
     </ShopContext.Provider>
   )
-};
+}

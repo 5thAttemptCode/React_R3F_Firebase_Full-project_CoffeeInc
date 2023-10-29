@@ -1,27 +1,28 @@
 import React from 'react'
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Home from './pages/Home'
-import About from './pages/About'
-import Contact from './pages/Contact'
-import Nav from './components/nav//Nav'
-import ProductDetails from './components/productDetails/ProductDetails'
-import Login from './pages/form/Login'
-import Cart from './pages/cart/Cart'
-import SignUp from './pages/form/SignUp'
 import { AuthContextProvider } from './context/AuthContext'
-import Account from './pages/account/Account'
-import ProtectedRoute from './components/ProtectedRoute'
-import LoggedInBar from './components/loggedInBar/LoggedInBar'
 import { ShopContextProvider } from './context/ShopContext'
+
+import About from './pages/About'
+import Account from './pages/account/Account'
+import Cart from './pages/cart/Cart'
+import Contact from './pages/Contact'
+import Home from './pages/Home'
+import Login from './pages/form/Login'
+import Nav from './components/nav//index'
+import ProductDetails from './components/productDetails/index'
+import ProtectedRoute from './utils/ProtectedRoute'
+import SignUp from './pages/form/SignUp'
 
 
 export default function App() {
+  
   return (
     <ShopContextProvider>
       <AuthContextProvider>
         <BrowserRouter>
           <Nav />
-          <LoggedInBar />
             <Routes>
               <Route index element={<Home />} />
               <Route path='/about' element={<About />} />

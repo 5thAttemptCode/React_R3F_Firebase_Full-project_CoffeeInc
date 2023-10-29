@@ -1,21 +1,27 @@
+
+:root{
+  --width: 20%;
+}
+
 .menu{
   position: fixed;
+  top: 0;
   right: 0;
-  height: 90vh;
-  width: 30%;
-  background: var(--white);
-  z-index: 12;
+  height: 100vh;
+  width: 100%;
+  background: grey;
+  z-index: 19;
 }
 
 .menu > a{
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   color: var(--black);
-  font-size: 30px;
+  font-size: clamp(1.4375rem, 0.8906rem + 1.75vw, 1.875rem);
   aspect-ratio: 1 / 1;
-  border-bottom: 1px solid var(--black);
-  border-right: 1px solid var(--black);
+  border-bottom: 2px solid var(--black);
+  border-left: 2px solid var(--black);
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -23,19 +29,42 @@
 }
 
 .menu:has(a:hover) a:not(:hover){
-  filter: blur(5px);
+  filter: blur(10px);
 }
 
 .menu > a:nth-child(1){
-  width: 45%;
-  z-index: 10;
+  width: var(--width);
+  z-index: 3;
 }
 
 .menu > a:nth-child(2){
-  width: 70%;
-  z-index: 5;
+  width: calc(var(--width) * 1.5);
+  z-index: 2;
 }
 
 .menu > a:nth-child(3){
-  width: 95%;
+  width: calc(var(--width) * 2);
+}
+
+
+@media (max-width: 1024px) {
+  :root{
+    --width: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  :root{
+    --width: 40%;
+  }
+}
+
+@media (max-width: 450px) {
+  :root{
+    --width: 45%;
+  }
+
+  .menu > a{
+    aspect-ratio: 1 / 1.7;
+  }
 }

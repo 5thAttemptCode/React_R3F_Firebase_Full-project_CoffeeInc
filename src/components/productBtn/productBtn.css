@@ -47,6 +47,7 @@
   opacity: 1;
 }
 
+
 @media (max-width: 930px){
   .product-btn > img{
     display: none;
