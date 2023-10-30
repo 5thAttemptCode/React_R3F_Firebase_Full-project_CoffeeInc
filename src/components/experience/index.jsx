@@ -2,35 +2,28 @@ import React from 'react'
 import './experience.css'
 
 import { Canvas } from '@react-three/fiber'
-import { SpotLight } from '@react-three/drei'
-
-import { Coffee } from './model/Coffee'
+import { CoffeeShop } from './CoffeeShop'
+import { Environment, Html, PresentationControls } from '@react-three/drei'
+import Menu from './html/Annotation'
 
 
 export default function Experience() {
 
   return (
-    <div className='canvas'>
-      {/* <Canvas camera={{ position: [0, 5, 0], fov: 55 }}>
-
-        <Coffee castShadow receiveShadow rotation-y={1.2} />
-        <directionalLight intensity={3.5} position={[ 0, 4, 0]} />
-        <SpotLight 
-          color="whitesmoke" 
-          position={[3, 3, -2]} 
-          castShadow  penumbra={1} 
-          distance={6} 
-          angle={0.35} 
-          attenuation={5} 
-          anglePower={10} 
-          intensity={4} 
-        />
-        <mesh position={[0, 0, 2]} receiveShadow>
-          <planeGeometry args={[50, 50]} />
-          <meshPhongMaterial />
-        </mesh>
-
-      </Canvas> */}
+    <div className="experience">
+      <div className='canvas'>
+        <Canvas camera={{ fov: 35, position: [2.64, 1.18, 2.78] }}>
+          <ambientLight intensity={1} />
+          <Environment preset="sunset" />
+          <PresentationControls  
+            polar={[0, 0]}
+            azimuth={[-0.5, 0.5]} 
+          >
+            <CoffeeShop position-y={-0.3} />
+            <Menu />
+          </PresentationControls>
+        </Canvas>
+      </div>
     </div>
   )
 }
