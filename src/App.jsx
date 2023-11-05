@@ -14,9 +14,13 @@ import Nav from './components/nav//index'
 import ProductDetails from './components/productDetails/index'
 import ProtectedRoute from './utils/ProtectedRoute'
 import SignUp from './pages/form/SignUp'
+import Shop from './pages/Shop'
+import useViewportHeight from './utils/useViewPortHeight'
 
 
 export default function App() {
+
+  useViewportHeight()
   
   return (
     <ShopContextProvider>
@@ -27,7 +31,8 @@ export default function App() {
               <Route index element={<Home />} />
               <Route path='/about' element={<About />} />
               <Route path='/contact' element={<Contact />} />
-              <Route path="/:id" element={<ProductDetails />} />
+              <Route path='/shop' element={<Shop />} />
+              <Route path="/shop/:id" element={<ProductDetails />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<SignUp />} />
               <Route path="/cart" element={<ProtectedRoute><Cart /></ProtectedRoute>} />

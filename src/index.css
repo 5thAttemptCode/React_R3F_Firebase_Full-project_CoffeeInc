@@ -15,9 +15,19 @@
   scroll-behavior: smooth;
 }
 
+::after, ::before{
+  content: '';
+  position: absolute;
+}
+
 body{
   background: var(--black);
   color: var(--white);
+}
+
+.canvas{
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
 }
 
 a{
@@ -43,7 +53,8 @@ img{
 }
 
 .section-margin {
-  margin-top: 10vh;
+  margin-block: 15vh 10vh;
+  margin-block: calc(var(--vh, 1vh) * 15) calc(var(--vh, 1vh) * 10);
 }
 
 .paragraph{
@@ -54,6 +65,10 @@ img{
 
 .shop{
   padding-bottom: 50px;
+}
+
+.about > img{
+  width: 100%;
 }
 
 .contact > p span{
