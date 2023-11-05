@@ -8,6 +8,8 @@ export default function Contact() {
   return (
     <div className='section section-margin contact'>
       <PageHeading text="Let's get in touch" />
+      <br />
+      <br />
       <p className='paragraph'><span>email: </span>info@coffee.com</p>
       <p className='paragraph'><span>phone: </span>03 685 18700</p>
       <br />

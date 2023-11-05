@@ -2,6 +2,17 @@
   position: absolute;
   top: 0;
   height: 90vh;
+  height: calc(var(--vh, 1vh) * 90);
   width: 100%;
   z-index: -1;
+}
+
+.shop, .about, .contact{
+  font-size: 100px;
+  line-height: 0.7;
+  background: none
+}
+
+.about, .contact{
+  font-size: 50px;
 }

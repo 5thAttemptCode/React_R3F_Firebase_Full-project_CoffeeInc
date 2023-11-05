@@ -5,12 +5,15 @@
     justify-content: center;
     gap: 10px;
     padding-bottom: 10vh;
+    padding-bottom: calc(var(--vh, 1vh) * 10);
 }
 
 .product-details > .container{
     height: 70vh;
+    height: calc(var(--vh, 1vh) * 70);
     width: 50%;
     margin-top: 20vh;
+    margin-top: calc(var(--vh, 1vh) * 20);
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -45,7 +48,8 @@
 }
 
 .product-details > .product-info button{
-    width: 100%;
+    width: 70%;
+    margin: 0 auto;
     padding-block: 10px;
     cursor: pointer;
     font-size: 18px;
@@ -83,7 +87,7 @@
         flex-direction: column;
     }
 
-    .container{
+    .product-details > .container{
         width: 100%;
         padding-inline: clamp(0.625rem, -6.4063rem + 22.5vw, 6.25rem);
     }

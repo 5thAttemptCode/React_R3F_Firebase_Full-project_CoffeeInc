@@ -1,6 +1,8 @@
 .form-wrapper{
     height: 90vh;
+    height: calc(var(--vh, 1vh) * 90);
     margin-top: 10vh;
+    margin-top: calc(var(--vh, 1vh) * 10);
     display: flex;
     justify-content: center;
     align-items: center;

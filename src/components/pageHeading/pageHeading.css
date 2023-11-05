@@ -1,7 +1,4 @@
 .h2{
-    font-size: clamp(1.5625rem, 1.1719rem + 1.25vw, 1.875rem);
-    font-weight: 300;
-    opacity: 0.5;
-    padding-block: 50px;
-    border-top: 1px solid var(--white);
+  font-size: clamp(1.875rem, 0.3125rem + 5vw, 3.125rem);
+  font-weight: 500;
   }

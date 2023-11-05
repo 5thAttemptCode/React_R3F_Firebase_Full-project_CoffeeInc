@@ -36,7 +36,7 @@ const Menu = React.forwardRef(({ setShow, ...props }, ref) => {
     <ul ref={ref} {...props} className='menu'>
       <Link onClick={() => setShow(false)} to={"/about"}>ABOUT&nbsp;&nbsp;</Link>
       <Link onClick={() => setShow(false)} to={"/contact"}>CONTACT&nbsp;&nbsp;</Link>
-      <Link onClick={() => setShow(false)} to={"/"}>SHOP&nbsp;&nbsp;</Link>
+      <Link onClick={() => setShow(false)} to={"/shop"}>SHOP&nbsp;&nbsp;</Link>
     </ul>
   )
 })

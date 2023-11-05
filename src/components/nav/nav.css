@@ -3,11 +3,13 @@ nav{
     top: 0;
     width: 100%;
     height: 10vh;
+    height: calc(var(--vh, 1vh) * 10);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-inline: 3vw;
     z-index: 20;
+    background: linear-gradient(#141414, rgb(20, 20, 20, 0.5), transparent)
 }
 
 nav > .logo .logo-btn{
@@ -21,10 +23,10 @@ nav > .logo > div{
 
 nav > .items{
     position: relative;
+    height: 100%;
     display: flex;
     align-items: center;
-    gap: 30px;
-    height: 100%;
+    gap: clamp(1.25rem, 0.4688rem + 2.5vw, 1.875rem);
 }
 
 nav > .items .cart-amount{
@@ -33,12 +35,12 @@ nav > .items .cart-amount{
     left: 40%;
     height: 1rem;
     width: 1rem;
-    padding: 11px;
-    border-radius: 50%;
-    background: #900000;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 11px;
+    border-radius: 50%;
+    background: #900000;
 }
 
 nav > .items .user{

@@ -7,7 +7,12 @@ export default function About() {
 
   return (
     <div className='section section-margin about'>
-      <PageHeading text="Our mission" />
+      <PageHeading text="We are COFFEE INC" />
+      <br />
+      <br />
+      <img src="https://images.pexels.com/photos/9409746/pexels-photo-9409746.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+      <br />
+      <br />
       <p className='paragraph'>Coffee Inc was founded in 2008 by speciality coffee pioneers, Timo and Henry. Synonymous with Melbourne coffee culture, 
         we’ve grown to be a dynamic team of talented coffee professionals, all sharing a wealth of experience and passion for what we do.
         Focused on wholesale, we choose to work with, train and support like-minded businesses wishing to serve our mindfully sourced and 

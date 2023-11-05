@@ -2,6 +2,7 @@
     margin: 0 auto;
     width: 60%;
     padding-top: 15vh;
+    padding-top: calc(var(--vh, 1vh) * 15);
     display: flex;
     flex-direction: column;
 }

@@ -7,17 +7,14 @@ import ProductDetails from '../productDetails'
 
 
 export default function ProductBtn({ data }) {
-
   return (
-    <Link 
-      className='product-btn' 
-      to={`/${data.id}`}
+    <Link className='product-btn'
+      to={`/shop/${data.id}`}
       state={{data}}
       element={<ProductDetails />}
     >
-      <p>{data.name}</p>
       <img src={data.image} alt="" />
+      <p>{data.name}</p>
     </Link>
   )
 }
-

@@ -37,8 +37,8 @@ export default function ProductDetails() {
           Add to Cart
         </button>
         <br />
-        <button className='to-cart' onClick={() => navigate("/cart")}>
-          Go to Checkout
+        <button className='to-cart' onClick={() => navigate("/shop")}>
+          Continue Shopping
         </button>
       </div>
     </div>
