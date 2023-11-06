@@ -1,7 +1,7 @@
 import React from 'react'
 import './account.css'
 
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { UserAuth } from '../../context/AuthContext'
 
 
@@ -24,6 +24,8 @@ export default function Account() {
       <div className="account-wrapper">
         <p>Account email: {user && user.email}</p>
         <br />
+        <br />
+        <Link to="/shop">START SHOPPING</Link>
         <br />
         <button onClick={handleLogout}>LOGOUT</button>
       </div>

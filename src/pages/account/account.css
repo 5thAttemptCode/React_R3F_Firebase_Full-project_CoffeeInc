@@ -21,12 +21,18 @@
     font-size: clamp(1.125rem, 0.3438rem + 2.5vw, 1.75rem);
 }
 
-.account > .account-wrapper > button{
+.account > .account-wrapper > button,
+.account > .account-wrapper > a{
     padding: 7px 0;
     width: 50%;
     background: var(--white);
+    color: var(--black);
     border: none;
     outline: none;
     font-weight: 600;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
 }
