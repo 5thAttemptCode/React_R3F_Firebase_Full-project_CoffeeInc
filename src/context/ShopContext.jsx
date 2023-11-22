@@ -1,22 +1,27 @@
-import { createContext, useEffect, useState } from "react"
+import { createContext, useEffect, useState, useMemo } from "react"
 import useCoffeeShop from '../utils/useCoffee'
 
 
 export const ShopContext = createContext(null)
 
 export const ShopContextProvider = (props) => {
+
   const [ cartItems, setCartItems ] = useState({})
   const { coffee, isLoading } = useCoffeeShop()
 
-  useEffect(() => {
-    if (!isLoading) { //Add check for isLoading
-      let defaultCart = {}
+  const defaultCart = useMemo(() => {
+    let defaultCart = {}
       coffee.forEach((item) => {
         defaultCart[item.id] = 0
       })
+    return defaultCart
+  }, [coffee]) 
+
+  useEffect(() => {
+    if (!isLoading) { //Add check for isLoading
       setCartItems(defaultCart)
     }
-  }, [coffee, isLoading])
+  }, [coffee, isLoading, defaultCart]) //Add 'defaultCart' to dependencies
 
   //___________________________________________
   const getTotalCartAmount = () => {
