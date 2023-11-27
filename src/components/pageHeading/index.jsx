@@ -1,5 +1,5 @@
 import React from 'react'
-import './pageHeading.css'
+import './style.css'
 
 
 export default function PageHeading( props ) {

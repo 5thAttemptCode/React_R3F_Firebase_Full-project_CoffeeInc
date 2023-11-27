@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState, useMemo } from "react"
-import useCoffeeShop from '../utils/useCoffee'
+import useCoffeeShop from '@/utils/useCoffee'
 
 
 export const ShopContext = createContext(null)

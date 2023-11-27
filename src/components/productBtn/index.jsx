@@ -1,9 +1,8 @@
 import React from 'react'
-import './productBtn.css'
+import './style.css'
 
 import { Link } from 'react-router-dom'
-
-import ProductDetails from '../productDetails'
+import ProductDetails from '@/components/productDetails'
 
 
 export default function ProductBtn({ data }) {
@@ -15,6 +14,7 @@ export default function ProductBtn({ data }) {
     >
       <img src={data.image} alt="" />
       <p>{data.name}</p>
+      <p className='price'>${data.price}</p>
     </Link>
   )
 }

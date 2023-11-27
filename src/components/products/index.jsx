@@ -1,8 +1,8 @@
 import React from 'react'
-import './product.css'
+import './style.css'
 
-import ProductBtn from '../productBtn/index'
-import useCoffeeShop from '../../utils/useCoffee'
+import ProductBtn from '@/components/productBtn/index'
+import useCoffeeShop from '@/utils/useCoffee'
 
 
 export default function Product() {

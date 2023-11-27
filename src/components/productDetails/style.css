@@ -1,0 +1,100 @@
+.product-details{
+    width: 100%;
+    background: var(--contrast);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-bottom: 10vh;
+    padding-bottom: calc(var(--vh, 1vh) * 10);
+}
+
+.product-details > .container{
+    height: 70vh;
+    height: calc(var(--vh, 1vh) * 70);
+    width: 50%;
+    margin-top: 20vh;
+    margin-top: calc(var(--vh, 1vh) * 20);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.product-details > .image > img{
+    width: auto;
+}
+
+.product-details > .product-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-inline-end: 15%;
+}
+
+.product-details > .product-info .details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.product-details > .product-info .details  p{
+    font-size: clamp(1.125rem, 0.1875rem + 3vw, 1.875rem);
+}
+
+.product-details > .product-info .details h2{
+    font-weight: 600;
+    color: var(--black);
+    font-size: clamp(1.375rem, 0.4375rem + 3vw, 2.125rem);
+}
+
+.product-details > .product-info button{
+    width: 70%;
+    margin: 0 auto;
+    padding-block: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.product-details > .product-info .add-cart{
+    background: var(--black);
+    color: var(--white)
+}
+
+.product-details > .product-info .add-cart:hover{
+    background: rgb(0, 0, 0, 0.6);
+}
+
+.product-details > .product-info .to-cart{
+    color: var(--black);
+    background: var(--white)
+}
+
+.product-details > .product-info .to-cart:hover{
+    background: rgba(255, 255, 255, 0.6);
+}
+
+
+@media (max-width: 1200px){
+    .product-info{
+        padding-inline-end: 5%;
+    }
+}
+
+@media (max-width: 830px){
+    .product-details{
+        height: auto;
+        flex-direction: column;
+    }
+
+    .product-details > .container{
+        width: 100%;
+        padding-inline: clamp(0.625rem, -6.4063rem + 22.5vw, 6.25rem);
+    }
+}
+
+@media (max-width: 500px){
+    .image{
+        height: 60vh;
+    }
+}

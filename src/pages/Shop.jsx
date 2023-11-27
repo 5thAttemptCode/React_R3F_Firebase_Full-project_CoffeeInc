@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Product from '../components/products/index'
+import Product from '@/components/products/index'
 
 
 export default function Shop() {

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import './menu.css'
+import './style.css'
 
 import gsap from 'gsap'
 import { Link } from 'react-router-dom'

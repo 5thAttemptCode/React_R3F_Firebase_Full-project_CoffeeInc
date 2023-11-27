@@ -1,6 +1,7 @@
-import { useProgress } from '@react-three/drei'
 import React, { useEffect } from 'react'
-import './loadingScreen.css'
+import './style.css'
+
+import { useProgress } from '@react-three/drei'
 
 
 export default function LoadingScreen({ started, onStarted }) {

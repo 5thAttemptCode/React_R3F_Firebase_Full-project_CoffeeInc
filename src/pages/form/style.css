@@ -1,0 +1,84 @@
+.form-wrapper{
+    height: 90vh;
+    height: calc(var(--vh, 1vh) * 90);
+    margin-top: 10vh;
+    margin-top: calc(var(--vh, 1vh) * 10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-wrapper > .login{
+    background: var(--contrast);
+}
+
+.form-wrapper > .login .demo{
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.form-wrapper > .signup{
+    background: var(--white);
+    color: var(--black);
+}
+
+.form-wrapper > .form-container{
+    padding-block: 30px;
+    padding-inline: clamp(0.625rem, -0.1563rem + 2.5vw, 1.25rem);
+}
+
+.form-wrapper > .form-container > h2{
+    font-size: 25px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.form-wrapper > .form-container > form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-wrapper > .form-container > form > div{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.form-wrapper > .form-container > form > div > label{
+    opacity: 0.7;
+}
+
+.form-wrapper > .form-container > form  > div > input{
+    font-size: 18px;
+    padding: 7px 10px;
+}
+
+.form-wrapper > .form-container > form > button{
+    width: 100%;
+    font-size: 18px;
+    padding: 7px 10px;
+    background: var(--black);
+    color: var(--white);
+    border: none;
+    outline: none;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.form-wrapper > .form-container > p{
+    font-weight: 500;
+    display: flex;
+    margin-top: 30px;
+}
+
+.form-wrapper > .form-container > p > .underline{
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+.form-wrapper > .signup > p > .underline{
+    color: var(--black);
+}
+
+

@@ -1,5 +1,5 @@
 import React, { Suspense, useRef, useState, useEffect } from 'react'
-import './experience.css'
+import './style.css'
 
 import { Canvas, useThree } from '@react-three/fiber'
 import { Environment, PresentationControls, Html } from '@react-three/drei'
@@ -7,8 +7,8 @@ import { gsap } from 'gsap'
 import { useNavigate } from 'react-router-dom'
 
 import { CoffeeShop } from './model/CoffeeShop'
-import LandingPage from '../landingPage'
-import LoadingScreen from '../loadingScreen'
+import LandingPage from '@/components/landingPage'
+import LoadingScreen from '@/components/loadingScreen'
 
 
 function AspectWrapper(props) {

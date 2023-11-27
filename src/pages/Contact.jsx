@@ -1,6 +1,6 @@
 import React from 'react'
 
-import PageHeading from '../components/pageHeading/index'
+import PageHeading from '@/components/pageHeading/index'
 
 
 export default function Contact() {

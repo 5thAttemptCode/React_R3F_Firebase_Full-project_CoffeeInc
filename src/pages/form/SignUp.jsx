@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import './form.css'
+import './style.css'
 
 import { Link, useNavigate } from 'react-router-dom'
 
 import Login from './Login'
-import { UserAuth } from '../../context/AuthContext'
+import { UserAuth } from '@/context/AuthContext'
 
 
 export default function SignUp() {

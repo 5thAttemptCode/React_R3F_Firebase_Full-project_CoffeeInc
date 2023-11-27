@@ -1,9 +1,8 @@
 import React, { useContext } from 'react'
-import './productDetails.css'
+import './style.css'
 
 import { useLocation, useNavigate } from 'react-router-dom'
-
-import { ShopContext } from '../../context/ShopContext'
+import { ShopContext } from '@/context/ShopContext'
 
 
 export default function ProductDetails() {

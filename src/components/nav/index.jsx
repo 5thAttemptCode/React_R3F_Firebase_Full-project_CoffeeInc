@@ -1,12 +1,12 @@
 import React, { useContext, useRef, useState } from 'react'
-import './nav.css'
+import './style.css'
 
 import { Link } from 'react-router-dom'
-import { ShopContext } from '../../context/ShopContext'
 import { ShoppingCartSimple, User, CheckCircle } from '@phosphor-icons/react'
 
-import Menu from '../menu/index'
-import { UserAuth } from '../../context/AuthContext'
+import Menu from '@/components/menu/index'
+import { ShopContext } from '@/context/ShopContext'
+import { UserAuth } from '@/context/AuthContext'
 
 
 export default function Nav() {
@@ -27,7 +27,6 @@ export default function Nav() {
       <nav>
         <div className="logo">
           <Link className='logo-btn' to="/">Coffee Inc.&trade;</Link>
-          <div>45°35'19.68"N 9°11'52.44"W</div>
         </div>
         <div className="items">
           {show ? null : 

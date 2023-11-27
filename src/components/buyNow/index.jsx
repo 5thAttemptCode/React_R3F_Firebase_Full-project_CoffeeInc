@@ -1,8 +1,7 @@
 import React, { useContext } from "react"
-import './buyNow.css'
+import './style.css'
 
-import { ShopContext } from '../../context/ShopContext'
-import useCoffeeShop from "../../utils/useCoffee"
+import { ShopContext } from '@/context/ShopContext'
 
 
 export default function BuyNow({ cafe }) {

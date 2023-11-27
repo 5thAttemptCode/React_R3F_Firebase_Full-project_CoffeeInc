@@ -1,0 +1,4 @@
+.h2{
+  font-size: clamp(1.875rem, 0.3125rem + 5vw, 3.125rem);
+  font-weight: 500;
+  }

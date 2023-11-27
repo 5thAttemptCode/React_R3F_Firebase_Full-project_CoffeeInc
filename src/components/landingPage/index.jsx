@@ -1,7 +1,7 @@
 import React from 'react'
-import './landing.css'
+import './style.css'
 
-import PageHeading from '../pageHeading/index'
+import PageHeading from '@/components/pageHeading/index'
 
 
 export default function LandingPage() {
